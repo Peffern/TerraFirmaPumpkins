@@ -1,0 +1,374 @@
+---- Minecraft Crash Report ----
+// I let you down. Sorry :(
+
+Time: 10/10/16 4:37 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Operand stack underflow
+Exception Details:
+  Location:
+    com/bioxx/tfc/Handlers/FoodCraftingHandler.updateOutput(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;Lnet/minecraft/inventory/IInventory;)V @1125: pop
+  Reason:
+    Attempt to pop empty stack.
+  Current Frame:
+    bci: @1125
+    flags: { }
+    locals: { 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/item/ItemStack', 'net/minecraft/inventory/IInventory', float, float, integer, integer, integer, integer, integer, '[I', '[I', float, 'java/lang/String', integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, '[I' }
+    stack: { }
+  Bytecode:
+    0x0000000: 0b46 0b38 0402 3605 0236 0602 3607 0236
+    0x0000010: 0802 3609 08bc 0a3a 0a08 bc0a 3a0b 0b38
+    0x0000020: 0c01 3a0d 0436 0e04 360f 0436 1004 3611
+    0x0000030: 0336 1203 3613 0336 1403 3615 a702 182c
+    0x0000040: 1515 b900 4102 00c7 0006 a702 0784 1401
+    0x0000050: 2c15 15b9 0041 0200 3a16 1916 b600 45c1
+    0x0000060: 006f 9901 ef19 16b6 007b 9901 e719 16b6
+    0x0000070: 007f 1281 b600 8799 01da 1513 9a00 2619
+    0x0000080: 16b8 00a1 3a0a 1916 b800 a43a 0b19 16b8
+    0x0000090: 00a7 380c 1916 b800 f23a 0d19 16b8 00f6
+    0x00000a0: 3612 1505 02a0 000d 1916 b800 fa36 05a7
+    0x00000b0: 0010 1505 1916 b800 fa9f 0006 0336 0515
+    0x00000c0: 0602 a000 0d19 16b8 00fd 3606 a700 1015
+    0x00000d0: 0619 16b8 00fd 9f00 0603 3606 1507 02a0
+    0x00000e0: 000d 1916 b801 0036 07a7 0010 1507 1916
+    0x00000f0: b801 009f 0006 0336 0715 0802 a000 0d19
+    0x0000100: 16b8 0103 3608 a700 1015 0819 16b8 0103
+    0x0000110: 9f00 0603 3608 1509 02a0 000d 1916 b801
+    0x0000120: 0636 09a7 0010 1509 1916 b801 069f 0006
+    0x0000130: 0336 0919 16b8 004d 3817 1717 3818 1916
+    0x0000140: b800 6617 186e 3819 1916 b800 6638 1a0b
+    0x0000150: 381b 150e 9900 0f19 16b8 010a 9900 0704
+    0x0000160: a700 0403 360e 150f 9900 0f19 16b8 010d
+    0x0000170: 9900 0704 a700 0403 360f 1510 9900 0f19
+    0x0000180: 16b8 0110 9900 0704 a700 0403 3610 1511
+    0x0000190: 9900 0f19 16b8 0113 9900 0704 a700 0403
+    0x00001a0: 3611 2512 a896 9c00 4e19 0b19 16b8 00a4
+    0x00001b0: b800 ac99 0041 190a 1916 b800 a1b8 00ac
+    0x00001c0: 9900 3419 16b8 00a7 8b11 0258 6410 786c
+    0x00001d0: 170c 8b11 0258 6410 786c a000 1a12 a825
+    0x00001e0: 6617 17b8 006d 381b 1717 171b 6638 1725
+    0x00001f0: 171b 6246 1717 1718 9599 0058 1717 0b95
+    0x0000200: 9a00 2317 040b 969c 0012 171a 1704 959e
+    0x0000210: 003f 171a 3804 a700 3817 0417 1a62 3804
+    0x0000220: a700 2e17 1b17 196a 381c 171a 171c 6638
+    0x0000230: 1a17 040b 969c 0012 171c 1704 959e 0011
+    0x0000240: 171c 3804 a700 0a17 0417 1c62 3804 8413
+    0x0000250: 0184 1501 1515 2cb9 0060 0100 a1fd e315
+    0x0000260: 1404 a000 4e17 040b 959e 0103 0336 15a7
+    0x0000270: 0032 2ab4 00b7 1515 b600 bac7 0006 a700
+    0x0000280: 202a b400 b715 15b6 00ba b600 45c1 00bc
+    0x0000290: 9900 0e25 1704 6646 0b38 04a7 00d1 8415
+    0x00002a0: 0115 152a b400 b7b6 00cb a1ff c8a7 00bf
+    0x00002b0: 0336 15a7 00ae 2c15 15b9 0041 0200 3a16
+    0x00002c0: 1916 c700 06a7 0099 1916 b600 45b2 0116
+    0x00002d0: a600 1319 16b6 00c3 1009 a000 0904 360e
+    0x00002e0: a700 7e19 16b6 0045 c100 bc99 0033 1704
+    0x00002f0: 0b95 9e00 0e25 1704 6646 0b38 04a7 0061
+    0x0000300: 1704 0b96 9d00 5a2b 2cb8 0027 9a00 5225
+    0x0000310: 0d6e 0c95 9b00 4a25 0d6e 46a7 0043 2b2c
+    0x0000320: b800 6399 003b 1916 b600 45c1 0047 9900
+    0x0000330: 3019 16b8 004d 3817 1916 b800 6638 1817
+    0x0000340: 180b 959b 000a 1717 1718 6638 1717 1712
+    0x0000350: 67b8 006d 0d6a 3819 1719 460b 3804 8415
+    0x0000360: 0115 152c b900 6001 00a1 ff4d 2b25 12d3
+    0x0000370: b800 d817 0412 d3b8 00d8 b800 734c 1505
+    0x0000380: 9900 092b 1505 b801 1a15 0699 0009 2b15
+    0x0000390: 06b8 011d 1507 9900 092b 1507 b801 2015
+    0x00003a0: 0899 0009 2b15 08b8 0123 1509 9900 092b
+    0x00003b0: 1509 b801 2617 0c0b 959e 0009 2b17 0cb8
+    0x00003c0: 0129 190a 593a 18be 3617 0336 16a7 001b
+    0x00003d0: 1918 1516 2e36 1515 159e 000c 2b19 0ab8
+    0x00003e0: 012d a700 0d84 1601 1516 1517 a1ff e419
+    0x00003f0: 0b59 3a18 be36 1703 3616 a700 1b19 1815
+    0x0000400: 162e 3615 1515 9e00 0c2b 190b b801 30a7
+    0x0000410: 000d 8416 0115 1615 17a1 ffe4 150e 9900
+    0x0000420: 092b 150e b801 3415 0f99 0009 2b15 0fb8
+    0x0000430: 0137 1510 9900 092b 1510 b801 3a15 1199
+    0x0000440: 000b 2b07 b801 3da7 000e 1512 9e00 092b
+    0x0000450: 1512 b801 3d19 0dc6 000f 2b19 0db8 0141
+    0x0000460: 2b2c b801 4757 2b2c b800 6357 2bb4 0077
+    0x0000470: 9a00 082b 04b5 0077 b1                 
+  Stackmap Table:
+    full_frame(@63,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@77)
+    append_frame(@162,Object[#57])
+    same_frame(@178)
+    same_frame(@191)
+    same_frame(@207)
+    same_frame(@220)
+    same_frame(@236)
+    same_frame(@249)
+    same_frame(@265)
+    same_frame(@278)
+    same_frame(@294)
+    same_frame(@307)
+    full_frame(@355,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Object[#57],Float,Float,Float,Float,Float},{})
+    same_locals_1_stack_item_frame(@356,Integer)
+    same_frame(@375)
+    same_locals_1_stack_item_frame(@376,Integer)
+    same_frame(@395)
+    same_locals_1_stack_item_frame(@396,Integer)
+    same_frame(@415)
+    same_locals_1_stack_item_frame(@416,Integer)
+    same_frame_extended(@500)
+    same_frame(@537)
+    same_frame(@547)
+    append_frame(@583,Float)
+    chop_frame(@590,1)
+    full_frame(@593,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@596)
+    same_frame(@626)
+    same_frame(@641)
+    same_frame(@670)
+    same_frame(@673)
+    same_frame(@688)
+    same_frame(@694)
+    append_frame(@712,Object[#57])
+    same_frame(@739)
+    same_frame(@768)
+    same_frame(@798)
+    append_frame(@845,Float,Float)
+    chop_frame(@862,2)
+    chop_frame(@865,1)
+    same_frame(@876)
+    same_frame(@905)
+    same_frame(@916)
+    same_frame(@927)
+    same_frame(@938)
+    same_frame(@949)
+    same_frame(@962)
+    append_frame(@976,Integer,Integer,Object[#157])
+    same_frame(@997)
+    same_frame(@1000)
+    same_frame(@1007)
+    same_frame(@1021)
+    same_frame(@1042)
+    same_frame(@1045)
+    same_frame(@1052)
+    same_frame(@1063)
+    same_frame(@1074)
+    same_frame(@1085)
+    same_frame(@1098)
+    same_frame(@1109)
+    same_frame(@1126)
+    same_frame(@1144)
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.initializeMods(Loader.java:739)
+	at cpw.mods.fml.client.FMLClientHandler.finishMinecraftLoading(FMLClientHandler.java:311)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:597)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.VerifyError: Operand stack underflow
+Exception Details:
+  Location:
+    com/bioxx/tfc/Handlers/FoodCraftingHandler.updateOutput(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;Lnet/minecraft/inventory/IInventory;)V @1125: pop
+  Reason:
+    Attempt to pop empty stack.
+  Current Frame:
+    bci: @1125
+    flags: { }
+    locals: { 'net/minecraft/entity/player/EntityPlayer', 'net/minecraft/item/ItemStack', 'net/minecraft/inventory/IInventory', float, float, integer, integer, integer, integer, integer, '[I', '[I', float, 'java/lang/String', integer, integer, integer, integer, integer, integer, integer, integer, integer, integer, '[I' }
+    stack: { }
+  Bytecode:
+    0x0000000: 0b46 0b38 0402 3605 0236 0602 3607 0236
+    0x0000010: 0802 3609 08bc 0a3a 0a08 bc0a 3a0b 0b38
+    0x0000020: 0c01 3a0d 0436 0e04 360f 0436 1004 3611
+    0x0000030: 0336 1203 3613 0336 1403 3615 a702 182c
+    0x0000040: 1515 b900 4102 00c7 0006 a702 0784 1401
+    0x0000050: 2c15 15b9 0041 0200 3a16 1916 b600 45c1
+    0x0000060: 006f 9901 ef19 16b6 007b 9901 e719 16b6
+    0x0000070: 007f 1281 b600 8799 01da 1513 9a00 2619
+    0x0000080: 16b8 00a1 3a0a 1916 b800 a43a 0b19 16b8
+    0x0000090: 00a7 380c 1916 b800 f23a 0d19 16b8 00f6
+    0x00000a0: 3612 1505 02a0 000d 1916 b800 fa36 05a7
+    0x00000b0: 0010 1505 1916 b800 fa9f 0006 0336 0515
+    0x00000c0: 0602 a000 0d19 16b8 00fd 3606 a700 1015
+    0x00000d0: 0619 16b8 00fd 9f00 0603 3606 1507 02a0
+    0x00000e0: 000d 1916 b801 0036 07a7 0010 1507 1916
+    0x00000f0: b801 009f 0006 0336 0715 0802 a000 0d19
+    0x0000100: 16b8 0103 3608 a700 1015 0819 16b8 0103
+    0x0000110: 9f00 0603 3608 1509 02a0 000d 1916 b801
+    0x0000120: 0636 09a7 0010 1509 1916 b801 069f 0006
+    0x0000130: 0336 0919 16b8 004d 3817 1717 3818 1916
+    0x0000140: b800 6617 186e 3819 1916 b800 6638 1a0b
+    0x0000150: 381b 150e 9900 0f19 16b8 010a 9900 0704
+    0x0000160: a700 0403 360e 150f 9900 0f19 16b8 010d
+    0x0000170: 9900 0704 a700 0403 360f 1510 9900 0f19
+    0x0000180: 16b8 0110 9900 0704 a700 0403 3610 1511
+    0x0000190: 9900 0f19 16b8 0113 9900 0704 a700 0403
+    0x00001a0: 3611 2512 a896 9c00 4e19 0b19 16b8 00a4
+    0x00001b0: b800 ac99 0041 190a 1916 b800 a1b8 00ac
+    0x00001c0: 9900 3419 16b8 00a7 8b11 0258 6410 786c
+    0x00001d0: 170c 8b11 0258 6410 786c a000 1a12 a825
+    0x00001e0: 6617 17b8 006d 381b 1717 171b 6638 1725
+    0x00001f0: 171b 6246 1717 1718 9599 0058 1717 0b95
+    0x0000200: 9a00 2317 040b 969c 0012 171a 1704 959e
+    0x0000210: 003f 171a 3804 a700 3817 0417 1a62 3804
+    0x0000220: a700 2e17 1b17 196a 381c 171a 171c 6638
+    0x0000230: 1a17 040b 969c 0012 171c 1704 959e 0011
+    0x0000240: 171c 3804 a700 0a17 0417 1c62 3804 8413
+    0x0000250: 0184 1501 1515 2cb9 0060 0100 a1fd e315
+    0x0000260: 1404 a000 4e17 040b 959e 0103 0336 15a7
+    0x0000270: 0032 2ab4 00b7 1515 b600 bac7 0006 a700
+    0x0000280: 202a b400 b715 15b6 00ba b600 45c1 00bc
+    0x0000290: 9900 0e25 1704 6646 0b38 04a7 00d1 8415
+    0x00002a0: 0115 152a b400 b7b6 00cb a1ff c8a7 00bf
+    0x00002b0: 0336 15a7 00ae 2c15 15b9 0041 0200 3a16
+    0x00002c0: 1916 c700 06a7 0099 1916 b600 45b2 0116
+    0x00002d0: a600 1319 16b6 00c3 1009 a000 0904 360e
+    0x00002e0: a700 7e19 16b6 0045 c100 bc99 0033 1704
+    0x00002f0: 0b95 9e00 0e25 1704 6646 0b38 04a7 0061
+    0x0000300: 1704 0b96 9d00 5a2b 2cb8 0027 9a00 5225
+    0x0000310: 0d6e 0c95 9b00 4a25 0d6e 46a7 0043 2b2c
+    0x0000320: b800 6399 003b 1916 b600 45c1 0047 9900
+    0x0000330: 3019 16b8 004d 3817 1916 b800 6638 1817
+    0x0000340: 180b 959b 000a 1717 1718 6638 1717 1712
+    0x0000350: 67b8 006d 0d6a 3819 1719 460b 3804 8415
+    0x0000360: 0115 152c b900 6001 00a1 ff4d 2b25 12d3
+    0x0000370: b800 d817 0412 d3b8 00d8 b800 734c 1505
+    0x0000380: 9900 092b 1505 b801 1a15 0699 0009 2b15
+    0x0000390: 06b8 011d 1507 9900 092b 1507 b801 2015
+    0x00003a0: 0899 0009 2b15 08b8 0123 1509 9900 092b
+    0x00003b0: 1509 b801 2617 0c0b 959e 0009 2b17 0cb8
+    0x00003c0: 0129 190a 593a 18be 3617 0336 16a7 001b
+    0x00003d0: 1918 1516 2e36 1515 159e 000c 2b19 0ab8
+    0x00003e0: 012d a700 0d84 1601 1516 1517 a1ff e419
+    0x00003f0: 0b59 3a18 be36 1703 3616 a700 1b19 1815
+    0x0000400: 162e 3615 1515 9e00 0c2b 190b b801 30a7
+    0x0000410: 000d 8416 0115 1615 17a1 ffe4 150e 9900
+    0x0000420: 092b 150e b801 3415 0f99 0009 2b15 0fb8
+    0x0000430: 0137 1510 9900 092b 1510 b801 3a15 1199
+    0x0000440: 000b 2b07 b801 3da7 000e 1512 9e00 092b
+    0x0000450: 1512 b801 3d19 0dc6 000f 2b19 0db8 0141
+    0x0000460: 2b2c b801 4757 2b2c b800 6357 2bb4 0077
+    0x0000470: 9a00 082b 04b5 0077 b1                 
+  Stackmap Table:
+    full_frame(@63,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@77)
+    append_frame(@162,Object[#57])
+    same_frame(@178)
+    same_frame(@191)
+    same_frame(@207)
+    same_frame(@220)
+    same_frame(@236)
+    same_frame(@249)
+    same_frame(@265)
+    same_frame(@278)
+    same_frame(@294)
+    same_frame(@307)
+    full_frame(@355,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer,Object[#57],Float,Float,Float,Float,Float},{})
+    same_locals_1_stack_item_frame(@356,Integer)
+    same_frame(@375)
+    same_locals_1_stack_item_frame(@376,Integer)
+    same_frame(@395)
+    same_locals_1_stack_item_frame(@396,Integer)
+    same_frame(@415)
+    same_locals_1_stack_item_frame(@416,Integer)
+    same_frame_extended(@500)
+    same_frame(@537)
+    same_frame(@547)
+    append_frame(@583,Float)
+    chop_frame(@590,1)
+    full_frame(@593,{Object[#155],Object[#57],Object[#59],Float,Float,Integer,Integer,Integer,Integer,Integer,Object[#157],Object[#157],Float,Object[#238],Integer,Integer,Integer,Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@596)
+    same_frame(@626)
+    same_frame(@641)
+    same_frame(@670)
+    same_frame(@673)
+    same_frame(@688)
+    same_frame(@694)
+    append_frame(@712,Object[#57])
+    same_frame(@739)
+    same_frame(@768)
+    same_frame(@798)
+    append_frame(@845,Float,Float)
+    chop_frame(@862,2)
+    chop_frame(@865,1)
+    same_frame(@876)
+    same_frame(@905)
+    same_frame(@916)
+    same_frame(@927)
+    same_frame(@938)
+    same_frame(@949)
+    same_frame(@962)
+    append_frame(@976,Integer,Integer,Object[#157])
+    same_frame(@997)
+    same_frame(@1000)
+    same_frame(@1007)
+    same_frame(@1021)
+    same_frame(@1042)
+    same_frame(@1045)
+    same_frame(@1052)
+    same_frame(@1063)
+    same_frame(@1074)
+    same_frame(@1085)
+    same_frame(@1098)
+    same_frame(@1109)
+    same_frame(@1126)
+    same_frame(@1144)
+
+	at com.bioxx.tfc.TerraFirmaCraft.initialize(TerraFirmaCraft.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.initializeMods(Loader.java:737)
+	... 12 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 609036600 bytes (580 MB) / 924319744 bytes (881 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHI	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHI	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHI	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHI	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCHI	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCHI	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCHE	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	UCHE	TerraFirmaPumpkins{1.0} [TerraFirmaPumpkins] (bin) 
+	UCHI	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	GL info: ' Vendor: 'Intel' Version: '2.1 INTEL-10.6.33' Renderer: 'Intel(R) Iris(TM) Graphics 6100'

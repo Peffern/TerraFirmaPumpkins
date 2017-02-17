@@ -1,0 +1,237 @@
+---- Minecraft Crash Report ----
+// Ooh. Shiny.
+
+Time: 10/11/16 11:27 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Bad local variable type
+Exception Details:
+  Location:
+    com/bioxx/tfc/WorldGen/BiomeDecoratorTFC.genDecorations(Lnet/minecraft/world/biome/BiomeGenBase;)V @184: iload
+  Reason:
+    Type 'com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops' (current frame, locals[5]) is not assignable to integer
+  Current Frame:
+    bci: @184
+    flags: { }
+    locals: { 'com/bioxx/tfc/WorldGen/BiomeDecoratorTFC', 'net/minecraft/world/biome/BiomeGenBase', 'java/util/Random', integer, 'com/bioxx/tfc/Food/CropIndex', 'com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops', integer, integer, integer, integer, integer }
+    stack: { integer, integer }
+  Bytecode:
+    0x0000000: 2ab6 003f bb00 4159 2ab4 0045 b600 4b2a
+    0x0000010: b400 4e10 077a 2ab4 0051 1007 7a64 2ab4
+    0x0000020: 0051 1007 7a68 8561 b700 544d 2cb8 005a
+    0x0000030: b600 5eb6 0062 3eb8 005a 1db6 0066 3a04
+    0x0000040: bb00 6859 1db7 006b 3a05 2ab4 006f 1014
+    0x0000050: b600 629a 0074 1904 c600 6f05 2ab4 006f
+    0x0000060: 1008 b600 6260 3606 2ab4 004e 2ab4 006f
+    0x0000070: 1010 b600 6260 1008 6036 072a b400 512a
+    0x0000080: b400 6f10 10b6 0062 6010 0860 3608 2ab4
+    0x0000090: 0045 1507 1508 b600 7304 6036 0903 360a
+    0x00000a0: a700 2019 052a b400 452a b400 6f15 0715
+    0x00000b0: 0804 b600 7b15 071d 1505 b800 8184 0a01
+    0x00000c0: 150a 1506 a1ff df03 360b a700 4c2a b400
+    0x00000d0: 4e2a b400 6f10 10b6 0062 6010 0860 3607
+    0x00000e0: 2ab4 0051 2ab4 006f 1010 b600 6260 1008
+    0x00000f0: 6036 082a b400 4515 0715 08b6 0073 3609
+    0x0000100: 2a2a b400 452a b400 6f15 0715 0915 08b6
+    0x0000110: 0085 5784 0b01 150b 2ab4 0087 a1ff b103
+    0x0000120: 360b a700 702a b400 6f10 64b6 0062 100a
+    0x0000130: a200 5f2a b400 4e2a b400 6f10 10b6 0062
+    0x0000140: 6010 0860 3607 2ab4 0051 2ab4 006f 1010
+    0x0000150: b600 6260 1008 6036 082a b400 4515 0715
+    0x0000160: 08b6 0073 3609 2ab4 0045 1507 1509 1508
+    0x0000170: b800 8d12 8e95 9b00 192a b400 272a b400
+    0x0000180: 452a b400 6f15 0715 0915 08b6 0092 5784
+    0x0000190: 0b01 150b 100a a1ff 8f2a b400 6f11 012c
+    0x00001a0: b600 629a 004f 2ab4 004e 2ab4 006f 1010
+    0x00001b0: b600 6260 1008 6036 072a b400 512a b400
+    0x00001c0: 6f10 10b6 0062 6010 0860 3608 2ab4 0045
+    0x00001d0: 1507 1508 b600 7336 09bb 0094 59b7 0095
+    0x00001e0: 2ab4 0045 2ab4 006f 1507 1509 1508 b600
+    0x00001f0: 9657 0336 0ba7 0089 2ab4 004e 2ab4 006f
+    0x0000200: 1010 b600 6260 1008 6036 072a b400 512a
+    0x0000210: b400 6f10 10b6 0062 6010 0860 3608 2ab4
+    0x0000220: 0045 1507 1508 b600 7336 092a b400 4515
+    0x0000230: 072a b400 4515 0715 08b6 0073 1508 b800
+    0x0000240: 8d38 062a b400 4515 0715 0915 08b8 0099
+    0x0000250: 380a 1706 129a 959e 0024 170a 129b 969c
+    0x0000260: 001c bb00 9d59 b700 9e2a b400 452a b400
+    0x0000270: 6f15 0715 0915 08b6 009f 5784 0b01 150b
+    0x0000280: 2ab4 001e a1ff 7403 360b a700 6a2a b400
+    0x0000290: 4e2a b400 6f10 10b6 0062 6010 0860 3607
+    0x00002a0: 2ab4 0051 2ab4 006f 1010 b600 6260 1008
+    0x00002b0: 6036 082a b400 4515 0715 08b6 00a2 0464
+    0x00002c0: 3609 2ab4 0045 1507 1509 1508 b800 8d12
+    0x00002d0: a395 9b00 1fbb 00a5 59b2 00ab b700 ae2a
+    0x00002e0: b400 452a b400 6f15 0715 0915 08b6 00af
+    0x00002f0: 5784 0b01 150b 2ab4 0020 a1ff 93b1     
+  Stackmap Table:
+    full_frame(@163,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@192)
+    full_frame(@199,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104]},{})
+    full_frame(@205,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+    same_frame_extended(@278)
+    same_frame(@293)
+    same_frame_extended(@399)
+    same_frame(@402)
+    same_frame_extended(@498)
+    same_frame(@504)
+    full_frame(@635,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Float,Integer,Integer,Integer,Float,Integer},{})
+    full_frame(@638,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+    same_frame(@653)
+    full_frame(@753,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Integer,Integer,Integer,Top,Integer},{})
+    full_frame(@756,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:559)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:522)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.VerifyError: Bad local variable type
+Exception Details:
+  Location:
+    com/bioxx/tfc/WorldGen/BiomeDecoratorTFC.genDecorations(Lnet/minecraft/world/biome/BiomeGenBase;)V @184: iload
+  Reason:
+    Type 'com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops' (current frame, locals[5]) is not assignable to integer
+  Current Frame:
+    bci: @184
+    flags: { }
+    locals: { 'com/bioxx/tfc/WorldGen/BiomeDecoratorTFC', 'net/minecraft/world/biome/BiomeGenBase', 'java/util/Random', integer, 'com/bioxx/tfc/Food/CropIndex', 'com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops', integer, integer, integer, integer, integer }
+    stack: { integer, integer }
+  Bytecode:
+    0x0000000: 2ab6 003f bb00 4159 2ab4 0045 b600 4b2a
+    0x0000010: b400 4e10 077a 2ab4 0051 1007 7a64 2ab4
+    0x0000020: 0051 1007 7a68 8561 b700 544d 2cb8 005a
+    0x0000030: b600 5eb6 0062 3eb8 005a 1db6 0066 3a04
+    0x0000040: bb00 6859 1db7 006b 3a05 2ab4 006f 1014
+    0x0000050: b600 629a 0074 1904 c600 6f05 2ab4 006f
+    0x0000060: 1008 b600 6260 3606 2ab4 004e 2ab4 006f
+    0x0000070: 1010 b600 6260 1008 6036 072a b400 512a
+    0x0000080: b400 6f10 10b6 0062 6010 0860 3608 2ab4
+    0x0000090: 0045 1507 1508 b600 7304 6036 0903 360a
+    0x00000a0: a700 2019 052a b400 452a b400 6f15 0715
+    0x00000b0: 0804 b600 7b15 071d 1505 b800 8184 0a01
+    0x00000c0: 150a 1506 a1ff df03 360b a700 4c2a b400
+    0x00000d0: 4e2a b400 6f10 10b6 0062 6010 0860 3607
+    0x00000e0: 2ab4 0051 2ab4 006f 1010 b600 6260 1008
+    0x00000f0: 6036 082a b400 4515 0715 08b6 0073 3609
+    0x0000100: 2a2a b400 452a b400 6f15 0715 0915 08b6
+    0x0000110: 0085 5784 0b01 150b 2ab4 0087 a1ff b103
+    0x0000120: 360b a700 702a b400 6f10 64b6 0062 100a
+    0x0000130: a200 5f2a b400 4e2a b400 6f10 10b6 0062
+    0x0000140: 6010 0860 3607 2ab4 0051 2ab4 006f 1010
+    0x0000150: b600 6260 1008 6036 082a b400 4515 0715
+    0x0000160: 08b6 0073 3609 2ab4 0045 1507 1509 1508
+    0x0000170: b800 8d12 8e95 9b00 192a b400 272a b400
+    0x0000180: 452a b400 6f15 0715 0915 08b6 0092 5784
+    0x0000190: 0b01 150b 100a a1ff 8f2a b400 6f11 012c
+    0x00001a0: b600 629a 004f 2ab4 004e 2ab4 006f 1010
+    0x00001b0: b600 6260 1008 6036 072a b400 512a b400
+    0x00001c0: 6f10 10b6 0062 6010 0860 3608 2ab4 0045
+    0x00001d0: 1507 1508 b600 7336 09bb 0094 59b7 0095
+    0x00001e0: 2ab4 0045 2ab4 006f 1507 1509 1508 b600
+    0x00001f0: 9657 0336 0ba7 0089 2ab4 004e 2ab4 006f
+    0x0000200: 1010 b600 6260 1008 6036 072a b400 512a
+    0x0000210: b400 6f10 10b6 0062 6010 0860 3608 2ab4
+    0x0000220: 0045 1507 1508 b600 7336 092a b400 4515
+    0x0000230: 072a b400 4515 0715 08b6 0073 1508 b800
+    0x0000240: 8d38 062a b400 4515 0715 0915 08b8 0099
+    0x0000250: 380a 1706 129a 959e 0024 170a 129b 969c
+    0x0000260: 001c bb00 9d59 b700 9e2a b400 452a b400
+    0x0000270: 6f15 0715 0915 08b6 009f 5784 0b01 150b
+    0x0000280: 2ab4 001e a1ff 7403 360b a700 6a2a b400
+    0x0000290: 4e2a b400 6f10 10b6 0062 6010 0860 3607
+    0x00002a0: 2ab4 0051 2ab4 006f 1010 b600 6260 1008
+    0x00002b0: 6036 082a b400 4515 0715 08b6 00a2 0464
+    0x00002c0: 3609 2ab4 0045 1507 1509 1508 b800 8d12
+    0x00002d0: a395 9b00 1fbb 00a5 59b2 00ab b700 ae2a
+    0x00002e0: b400 452a b400 6f15 0715 0915 08b6 00af
+    0x00002f0: 5784 0b01 150b 2ab4 0020 a1ff 93b1     
+  Stackmap Table:
+    full_frame(@163,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Integer,Integer,Integer,Integer,Integer},{})
+    same_frame(@192)
+    full_frame(@199,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104]},{})
+    full_frame(@205,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+    same_frame_extended(@278)
+    same_frame(@293)
+    same_frame_extended(@399)
+    same_frame(@402)
+    same_frame_extended(@498)
+    same_frame(@504)
+    full_frame(@635,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Float,Integer,Integer,Integer,Float,Integer},{})
+    full_frame(@638,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+    same_frame(@653)
+    full_frame(@753,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Integer,Integer,Integer,Top,Integer},{})
+    full_frame(@756,{Object[#2],Object[#117],Object[#65],Integer,Object[#119],Object[#104],Top,Top,Top,Top,Top,Integer},{})
+
+	at com.bioxx.tfc.WorldGen.TFCBiome.createBiomeDecorator(TFCBiome.java:171)
+	at com.bioxx.tfc.WorldGen.TFCBiome.createBiomeDecorator(TFCBiome.java:1)
+	at net.minecraft.world.biome.BiomeGenBase.<init>(BiomeGenBase.java:191)
+	at net.minecraft.world.biome.BiomeGenBase.<init>(BiomeGenBase.java:167)
+	at com.bioxx.tfc.WorldGen.TFCBiome.<init>(TFCBiome.java:76)
+	at com.bioxx.tfc.WorldGen.TFCBiome.<clinit>(TFCBiome.java:26)
+	at com.bioxx.tfc.WorldGen.TFCWorldType.<clinit>(TFCWorldType.java:19)
+	at com.bioxx.tfc.TerraFirmaCraft.preInit(TerraFirmaCraft.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	... 12 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 378369288 bytes (360 MB) / 872415232 bytes (832 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCH	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCH	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCH	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCH	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCH	TerraFirmaPumpkins{1.0} [TerraFirmaPumpkins] (bin) 
+	UCH	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	UCE	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	GL info: ' Vendor: 'Intel' Version: '2.1 INTEL-10.6.33' Renderer: 'Intel(R) Iris(TM) Graphics 6100'

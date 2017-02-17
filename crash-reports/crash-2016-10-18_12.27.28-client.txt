@@ -1,0 +1,120 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 10/18/16 12:27 PM
+Description: Rendering item
+
+java.lang.NullPointerException: Rendering item
+	at com.bioxx.tfc.Items.ItemTerra.getIconFromDamage(ItemTerra.java:128)
+	at net.minecraft.item.Item.getIconIndex(Item.java:457)
+	at net.minecraft.item.ItemStack.getIconIndex(ItemStack.java:131)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:420)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:585)
+	at net.minecraft.client.gui.GuiIngame.renderInventorySlot(GuiIngame.java:973)
+	at net.minecraftforge.client.GuiIngameForge.renderHotbar(GuiIngameForge.java:209)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:144)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1114)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1067)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:962)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.bioxx.tfc.Items.ItemTerra.getIconFromDamage(ItemTerra.java:128)
+	at net.minecraft.item.Item.getIconIndex(Item.java:457)
+	at net.minecraft.item.ItemStack.getIconIndex(ItemStack.java:131)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:420)
+
+-- Item being rendered --
+Details:
+	Item Type: com.peffern.pumpkins.ItemCustomFungi@56b362d5
+	Item Aux: 0
+	Item NBT: null
+	Item Foil: false
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:585)
+	at net.minecraft.client.gui.GuiIngame.renderInventorySlot(GuiIngame.java:973)
+	at net.minecraftforge.client.GuiIngameForge.renderHotbar(GuiIngameForge.java:209)
+	at net.minecraftforge.client.GuiIngameForge.renderGameOverlay(GuiIngameForge.java:144)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player712'/291, l='MpServer', x=4262.50, y=147.62, z=-7895.50]]
+	Chunk stats: MultiplayerChunkCache: 588, 588
+	Level seed: -501131516546306637
+	Level generator: ID 00 - TFCDefault, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (4256,148,-7904), Chunk: (at 0,9,0 in 266,-494; contains blocks 4256,0,-7904 to 4271,255,-7889), Region: (8,-16; contains chunks 256,-512 to 287,-481, blocks 4096,0,-8192 to 4607,255,-7681)
+	Level time: 617055 game time, 1515055 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 107 total; [EntityZombieTFC['Zombie'/257, l='MpServer', x=4340.16, y=50.00, z=-7888.22], EntityZombieTFC['Zombie'/258, l='MpServer', x=4337.50, y=50.00, z=-7887.50], EntityZombieTFC['Zombie'/259, l='MpServer', x=4339.31, y=64.00, z=-7873.28], EntityZombieTFC['Zombie'/260, l='MpServer', x=4342.00, y=65.00, z=-7876.44], EntityZombieTFC['Zombie'/261, l='MpServer', x=4347.84, y=126.00, z=-7883.50], EntityZombieTFC['Zombie'/262, l='MpServer', x=4342.50, y=127.00, z=-7878.50], EntitySkeletonTFC['Skeleton'/263, l='MpServer', x=4350.09, y=126.00, z=-7881.50], EntitySkeletonTFC['Skeleton'/264, l='MpServer', x=4340.63, y=127.00, z=-7880.69], EntityZombieTFC['Zombie'/265, l='MpServer', x=4341.56, y=127.00, z=-7880.00], EntitySkeletonTFC['Skeleton'/266, l='MpServer', x=4334.31, y=127.00, z=-7870.54], EntitySpiderTFC['Spider'/267, l='MpServer', x=4334.44, y=127.00, z=-7875.78], EntitySpiderTFC['Spider'/268, l='MpServer', x=4340.84, y=127.00, z=-7874.34], EntityCreeperTFC['Creeper'/269, l='MpServer', x=4336.69, y=127.00, z=-7875.38], EntityZombieTFC['Zombie'/270, l='MpServer', x=4339.31, y=127.00, z=-7877.31], EntityEndermanTFC['Enderman'/271, l='MpServer', x=4335.72, y=127.00, z=-7875.75], EntitySkeletonTFC['Skeleton'/272, l='MpServer', x=4340.69, y=64.00, z=-7871.16], EntityZombieTFC['Zombie'/273, l='MpServer', x=4336.88, y=64.00, z=-7868.09], EntityZombieTFC['Zombie'/274, l='MpServer', x=4337.97, y=125.00, z=-7865.44], EntitySkeletonTFC['Skeleton'/275, l='MpServer', x=4349.56, y=129.00, z=-7870.06], EntityZombieTFC['Zombie'/276, l='MpServer', x=4341.50, y=126.00, z=-7852.50], EntityZombieTFC['Zombie'/277, l='MpServer', x=4346.50, y=97.00, z=-7829.50], EntityZombieTFC['Zombie'/278, l='MpServer', x=4347.50, y=97.00, z=-7829.50], EntityZombieTFC['Zombie'/280, l='MpServer', x=4352.59, y=61.00, z=-7924.06], EntityCreeperTFC['Creeper'/282, l='MpServer', x=4353.56, y=60.00, z=-7905.34], EntityZombieTFC['Zombie'/283, l='MpServer', x=4352.56, y=60.00, z=-7907.44], EntityZombieTFC['Zombie'/284, l='MpServer', x=4353.84, y=60.00, z=-7904.41], EntityCreeperTFC['Creeper'/285, l='MpServer', x=4351.63, y=60.00, z=-7902.94], EntityZombieTFC['Zombie'/287, l='MpServer', x=4357.38, y=74.00, z=-7880.13], EntitySkeletonTFC['Skeleton'/288, l='MpServer', x=4363.09, y=124.00, z=-7885.50], EntityWolfTFC['Wolf'/289, l='MpServer', x=4375.69, y=121.00, z=-7761.34], EntityWolfTFC['Wolf'/290, l='MpServer', x=4376.50, y=126.00, z=-7762.06], EntityClientPlayerMP['Player712'/291, l='MpServer', x=4262.50, y=147.62, z=-7895.50], EntitySkeletonTFC['Skeleton'/150, l='MpServer', x=4177.50, y=83.00, z=-7957.50], EntityZombieTFC['Zombie'/151, l='MpServer', x=4182.78, y=80.00, z=-7958.50], EntitySquidTFC['Squid'/161, l='MpServer', x=4202.38, y=128.31, z=-7925.38], EntitySquidTFC['Squid'/164, l='MpServer', x=4206.50, y=128.34, z=-7928.91], EntitySpiderTFC['Spider'/1700, l='MpServer', x=4334.50, y=61.00, z=-7895.50], EntitySquidTFC['Squid'/166, l='MpServer', x=4214.59, y=129.25, z=-7933.69], EntitySkeletonTFC['Skeleton'/1702, l='MpServer', x=4338.50, y=61.00, z=-7897.50], EntitySquidTFC['Squid'/167, l='MpServer', x=4203.69, y=128.00, z=-7933.69], EntitySkeletonTFC['Skeleton'/1703, l='MpServer', x=4344.55, y=60.00, z=-7905.30], EntitySkeletonTFC['Skeleton'/1704, l='MpServer', x=4340.50, y=61.00, z=-7896.50], EntitySkeletonTFC['Skeleton'/172, l='MpServer', x=4223.50, y=119.00, z=-7786.50], EntityZombieTFC['Zombie'/175, l='MpServer', x=4238.06, y=53.00, z=-7972.50], EntityBat['Bat'/176, l='MpServer', x=4244.51, y=53.23, z=-7972.09], EntityZombieTFC['Zombie'/180, l='MpServer', x=4249.50, y=53.00, z=-7976.50], EntitySkeletonTFC['Skeleton'/181, l='MpServer', x=4248.53, y=53.00, z=-7969.94], EntitySkeletonTFC['Skeleton'/182, l='MpServer', x=4252.06, y=53.00, z=-7976.47], EntityBat['Bat'/184, l='MpServer', x=4253.69, y=56.02, z=-7969.84], EntityBat['Bat'/185, l='MpServer', x=4252.88, y=54.17, z=-7971.69], EntityZombieTFC['Zombie'/186, l='MpServer', x=4250.72, y=136.00, z=-7803.72], EntityZombieTFC['Zombie'/187, l='MpServer', x=4240.94, y=136.00, z=-7802.31], EntitySkeletonTFC['Skeleton'/188, l='MpServer', x=4251.69, y=136.00, z=-7804.69], EntityZombieTFC['Zombie'/189, l='MpServer', x=4259.50, y=56.00, z=-7970.50], EntityZombieTFC['Zombie'/190, l='MpServer', x=4258.50, y=56.00, z=-7970.50], EntityZombieTFC['Zombie'/191, l='MpServer', x=4257.50, y=56.00, z=-7971.50], EntitySkeletonTFC['Skeleton'/192, l='MpServer', x=4259.50, y=60.00, z=-7973.50], EntityBat['Bat'/193, l='MpServer', x=4261.00, y=57.98, z=-7967.22], EntityItem['item.tile.Pumpkin'/194, l='MpServer', x=4270.34, y=151.13, z=-7913.13], EntityBat['Bat'/203, l='MpServer', x=4266.69, y=66.17, z=-7966.59], EntityBat['Bat'/716, l='MpServer', x=4319.31, y=50.19, z=-7913.25], EntityItem['item.item.Raw Mushroom.mushroom_brown'/205, l='MpServer', x=4274.97, y=151.13, z=-7916.53], EntityItem['item.item.Raw Mushroom.mushroom_brown'/206, l='MpServer', x=4277.66, y=151.13, z=-7917.88], EntityItem['item.item.Raw Mushroom.mushroom_brown'/207, l='MpServer', x=4274.88, y=150.13, z=-7915.13], EntityItem['item.item.Raw Mushroom.mushroom_brown'/208, l='MpServer', x=4272.13, y=151.13, z=-7912.41], EntityItem['item.item.Copper Knife'/209, l='MpServer', x=4276.31, y=152.13, z=-7918.06], EntityItem['item.item.Raw Mushroom.mushroom_brown'/210, l='MpServer', x=4276.28, y=151.13, z=-7914.78], EntityZombieTFC['Zombie'/212, l='MpServer', x=4305.50, y=50.00, z=-7928.50], EntityBat['Bat'/213, l='MpServer', x=4322.31, y=59.20, z=-7892.72], EntityCreeperTFC['Creeper'/214, l='MpServer', x=4320.00, y=66.00, z=-7899.53], EntitySkeletonTFC['Skeleton'/215, l='MpServer', x=4314.03, y=98.00, z=-7821.47], EntityZombieTFC['Zombie'/216, l='MpServer', x=4314.66, y=98.00, z=-7822.88], EntitySkeletonTFC['Skeleton'/217, l='MpServer', x=4325.16, y=68.00, z=-7931.28], EntityZombieTFC['Zombie'/218, l='MpServer', x=4331.63, y=68.00, z=-7931.09], EntityZombieTFC['Zombie'/219, l='MpServer', x=4330.84, y=68.00, z=-7931.03], EntitySkeletonTFC['Skeleton'/220, l='MpServer', x=4326.50, y=69.00, z=-7934.88], EntitySkeletonTFC['Skeleton'/221, l='MpServer', x=4332.50, y=59.00, z=-7911.50], EntityEndermanTFC['Enderman'/222, l='MpServer', x=4337.03, y=62.00, z=-7905.34], EntityBat['Bat'/223, l='MpServer', x=4332.06, y=60.73, z=-7894.00], EntitySkeletonTFC['Skeleton'/224, l='MpServer', x=4328.16, y=126.00, z=-7890.50], EntityZombieTFC['Zombie'/225, l='MpServer', x=4334.74, y=129.00, z=-7869.24], EntitySkeletonTFC['Skeleton'/226, l='MpServer', x=4333.31, y=127.00, z=-7872.72], EntityCreeperTFC['Creeper'/227, l='MpServer', x=4332.97, y=126.00, z=-7885.50], EntityZombieTFC['Zombie'/228, l='MpServer', x=4333.94, y=126.00, z=-7885.31], EntityZombieTFC['Zombie'/229, l='MpServer', x=4332.50, y=122.00, z=-7858.03], EntityZombieTFC['Zombie'/230, l='MpServer', x=4339.44, y=126.00, z=-7863.88], EntityZombieTFC['Zombie'/231, l='MpServer', x=4330.50, y=131.00, z=-7864.50], EntityZombieTFC['Zombie'/232, l='MpServer', x=4329.59, y=131.00, z=-7869.00], EntitySkeletonTFC['Skeleton'/233, l='MpServer', x=4328.38, y=97.00, z=-7840.03], EntitySkeletonTFC['Skeleton'/234, l='MpServer', x=4329.50, y=131.00, z=-7855.50], EntityZombieTFC['Zombie'/235, l='MpServer', x=4330.50, y=131.00, z=-7855.50], EntityCreeperTFC['Creeper'/236, l='MpServer', x=4323.50, y=119.00, z=-7834.50], EntitySkeletonTFC['Skeleton'/237, l='MpServer', x=4346.09, y=62.00, z=-7928.50], EntityZombieTFC['Zombie'/239, l='MpServer', x=4351.41, y=62.00, z=-7912.50], EntitySkeletonTFC['Skeleton'/240, l='MpServer', x=4348.69, y=62.00, z=-7913.41], EntityZombieTFC['Zombie'/243, l='MpServer', x=4350.50, y=61.00, z=-7908.50], EntityZombieTFC['Zombie'/244, l='MpServer', x=4341.59, y=57.00, z=-7905.34], EntityZombieTFC['Zombie'/245, l='MpServer', x=4351.44, y=60.00, z=-7905.53], EntityZombieTFC['Zombie'/246, l='MpServer', x=4343.50, y=60.00, z=-7910.22], EntityZombieTFC['Zombie'/247, l='MpServer', x=4343.50, y=60.00, z=-7909.16], EntityBat['Bat'/1783, l='MpServer', x=4241.62, y=51.00, z=-7973.59], EntityCreeperTFC['Creeper'/248, l='MpServer', x=4350.38, y=62.00, z=-7911.13], EntityZombieTFC['Zombie'/249, l='MpServer', x=4344.50, y=60.00, z=-7912.44], EntityBat['Bat'/250, l='MpServer', x=4341.75, y=62.00, z=-7903.69], EntitySkeletonTFC['Skeleton'/251, l='MpServer', x=4343.92, y=60.00, z=-7920.56], EntityZombieTFC['Zombie'/252, l='MpServer', x=4348.50, y=64.00, z=-7915.50], EntitySkeletonTFC['Skeleton'/254, l='MpServer', x=4337.50, y=50.00, z=-7889.50]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:415)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2566)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:984)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 332272128 bytes (316 MB) / 884473856 bytes (843 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 4, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAAAAAAA	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAAAAAAA	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAAAAAAA	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCHIJAAAAAAAAA	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCHIJAAAAAAAAA	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCHIJAAAAAAAAA	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCHIJAAAAAAAAA	TerraFirmaPumpkins{1.2} [TerraFirmaPumpkins] (bin) 
+	UCHIJAAAAAAAAA	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	UCHIJAAAAAAAAA	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	GL info: ' Vendor: 'Intel' Version: '2.1 INTEL-10.6.33' Renderer: 'Intel(R) Iris(TM) Graphics 6100'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.1
+	OpenGL: Intel(R) Iris(TM) Graphics 6100 GL version 2.1 INTEL-10.6.33, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because ARB_framebuffer_object is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

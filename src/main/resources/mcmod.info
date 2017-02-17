@@ -1,0 +1,21 @@
+{
+    "modListVersion": 2,
+    "modList": [{
+        "modid": "TerraFirmaPumpkins",
+        "name": "TerraFirmaPumpkins",
+        "description": "This mod adds growable pumpkin and melon plants to TerraFirmaCraft.",
+        "version": "2.0}",
+        "mcversion": "1.7.10",
+        "url": "",
+        "updateUrl": "",
+        "authorList": ["Peffern"],
+        "credits": "Thanks to Dries007 and Bletch for showing me how to make TFC Addons",
+        "logoFile": "",
+        "screenshots": [],
+        "parent": "",
+        "requiredMods": [  ],
+        "dependencies": [  ],
+        "dependants": [  ],
+        "useDependencyInformation": "true"
+    }]
+}

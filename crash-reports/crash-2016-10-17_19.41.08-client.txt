@@ -1,0 +1,334 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 10/17/16 7:41 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+cpw.mods.fml.common.LoaderException: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    com/bioxx/tfc/BlockSetup.registerBlocks()V @1527: invokestatic
+  Reason:
+    Type 'java/lang/String' (current frame, stack[1]) is not assignable to 'java/lang/Class'
+  Current Frame:
+    bci: @1527
+    flags: { }
+    locals: { integer }
+    stack: { 'net/minecraft/block/Block', 'java/lang/String', 'java/lang/String' }
+  Bytecode:
+    0x0000000: b200 1512 17b8 001d 57b2 0020 1222 b800
+    0x0000010: 1d57 b200 2512 27b8 001d 57b2 002a 122c
+    0x0000020: 122e b800 3157 b200 3412 2c12 36b8 0031
+    0x0000030: 57b2 0039 122c 123b b800 3157 b200 3e12
+    0x0000040: 2c12 40b8 0031 57b2 0043 122c 1245 b800
+    0x0000050: 3157 b200 4812 2c12 4ab8 0031 57b2 004d
+    0x0000060: 122c 124f b800 3157 b200 5212 2c12 54b8
+    0x0000070: 0031 57b2 0057 122c 1259 b800 3157 b200
+    0x0000080: 5c12 2c12 5eb8 0031 57b2 0061 122c 1263
+    0x0000090: b800 3157 b200 6612 2c12 68b8 0031 57b2
+    0x00000a0: 006b 122c 126d b800 3157 b200 7012 2c12
+    0x00000b0: 72b8 0031 57b2 0075 122c 1277 b800 3157
+    0x00000c0: b200 7a12 2c12 7cb8 0031 57b2 007f 1281
+    0x00000d0: 1283 b800 3157 b200 8612 8112 88b8 0031
+    0x00000e0: 57b2 008b 1281 128d b800 3157 b200 9012
+    0x00000f0: 8112 92b8 0031 57b2 0095 1281 1297 b800
+    0x0000100: 3157 b200 9a12 8112 9cb8 0031 57b2 009f
+    0x0000110: 1281 12a1 b800 3157 b200 a412 8112 a6b8
+    0x0000120: 0031 57b2 00a9 1281 12ab b800 3157 b200
+    0x0000130: ae12 8112 b0b8 0031 57b2 00b3 1281 12b5
+    0x0000140: b800 3157 b200 b812 8112 bab8 0031 57b2
+    0x0000150: 00bd 1281 12bf b800 3157 b200 c212 8112
+    0x0000160: c4b8 0031 57b2 00c7 12c9 12cb b800 3157
+    0x0000170: b200 ce12 d0b8 001d 57b2 00d3 12d5 b800
+    0x0000180: 1d57 b200 d812 dab8 001d 57b2 00dd 12df
+    0x0000190: b800 1d57 b200 e212 8112 e3b8 0031 57b2
+    0x00001a0: 00e6 1281 12e7 b800 3157 b200 ea12 ec12
+    0x00001b0: eeb8 0031 57b2 00f1 12ec 12f3 b800 3157
+    0x00001c0: b200 f612 f812 fab8 0031 57b2 00fd 12f8
+    0x00001d0: 12ff b800 3157 b201 0213 0104 b800 1d57
+    0x00001e0: b201 0713 0109 1301 0bb8 0031 57b2 010e
+    0x00001f0: 1301 1013 0112 b800 3157 b201 1513 0109
+    0x0000200: 1301 16b8 0031 57b2 0119 1301 1013 011a
+    0x0000210: b800 3157 b201 1d13 011f 1301 20b8 0031
+    0x0000220: 57b2 0123 1301 2513 0126 b800 3157 b201
+    0x0000230: 2913 0109 1301 2ab8 0031 57b2 012d 1301
+    0x0000240: 1013 012e b800 3157 b201 3113 0133 b800
+    0x0000250: 1d57 b201 3613 0138 1301 3ab8 0031 57b2
+    0x0000260: 013d 1301 3f13 0141 b800 3157 b201 4413
+    0x0000270: 0146 1301 48b8 0031 57b2 014b 1301 4db8
+    0x0000280: 001d 57b2 0150 1301 52b8 001d 57b2 0155
+    0x0000290: 1301 5713 0159 b800 3157 b201 5c13 0157
+    0x00002a0: 1301 5eb8 0031 57b2 0161 1301 63b8 001d
+    0x00002b0: 57b2 0166 1301 68b8 001d 57b2 016b 1301
+    0x00002c0: 6cb8 001d 57b2 016f 1301 70b8 001d 57b2
+    0x00002d0: 0173 1301 74b8 001d 57b2 0177 1301 78b8
+    0x00002e0: 001d 57b2 017b 1301 7cb8 001d 57b2 017f
+    0x00002f0: 1301 80b8 001d 57b2 0183 1301 85b8 001d
+    0x0000300: 57b2 0188 1301 0913 018a b800 3157 b201
+    0x0000310: 8d13 0110 1301 8fb8 0031 57b2 0192 1301
+    0x0000320: 9413 0196 b800 3157 b201 9913 019b 1301
+    0x0000330: 9db8 0031 57b2 01a0 1301 a213 01a4 b800
+    0x0000340: 3157 b201 a713 01a9 b800 1d57 b201 ac13
+    0x0000350: 01ae 1301 b0b8 0031 57b2 01b3 1301 5713
+    0x0000360: 01b5 b800 3157 b201 b813 01ba b800 1d57
+    0x0000370: b201 bd13 0157 1301 bfb8 0031 57b2 01c2
+    0x0000380: 122c 1301 c4b8 0031 57b2 01c7 122c 1301
+    0x0000390: c9b8 0031 57b2 01cc 122c 1301 ceb8 0031
+    0x00003a0: 57b2 01d1 122c 1301 d3b8 0031 57b2 01d6
+    0x00003b0: 122c 1301 d8b8 0031 57b2 01db 122c 1301
+    0x00003c0: ddb8 0031 57b2 01e0 122c 1301 e2b8 0031
+    0x00003d0: 57b2 01e5 122c 1301 e7b8 0031 57b2 01ea
+    0x00003e0: 122c 1301 ecb8 0031 57b2 01ef 122c 1301
+    0x00003f0: f1b8 0031 57b2 01f4 122c 1301 f6b8 0031
+    0x0000400: 57b2 01f9 122c 1301 fbb8 0031 57b2 01fe
+    0x0000410: 122c 1302 00b8 0031 57b2 0203 122c 1302
+    0x0000420: 05b8 0031 57b2 0208 122c 1302 0ab8 0031
+    0x0000430: 57b2 020d 122c 1302 0fb8 0031 57b2 0212
+    0x0000440: 1302 14b8 001d 57b2 0217 1302 19b8 001d
+    0x0000450: 57b2 021c 1302 1eb8 001d 57b2 0221 1302
+    0x0000460: 23b8 001d 57b2 0226 1302 28b8 001d 57b2
+    0x0000470: 022b 1302 2db8 001d 57b2 0230 1302 32b8
+    0x0000480: 001d 57b2 0235 1302 37b8 001d 57b2 023a
+    0x0000490: 1302 3cb8 001d 57b2 023f 1302 41b8 001d
+    0x00004a0: 57b2 0244 1302 46b8 001d 57b2 0249 1302
+    0x00004b0: 4bb8 001d 5703 3ba7 002d b202 4f1a 32bb
+    0x00004c0: 0251 5913 0253 b702 56b2 025c 1a32 1302
+    0x00004d0: 5e13 0260 b602 66b6 026a b602 6eb8 001d
+    0x00004e0: 5784 0001 1ab2 025c bea1 ffd1 b202 7113
+    0x00004f0: 0273 b800 1d57 b202 7613 0278 1302 7ab8
+    0x0000500: 0031 57b2 027d 1302 7f13 0281 b800 3157
+    0x0000510: b202 8413 0286 b800 1d57 b202 8913 028b
+    0x0000520: 1302 8db8 0031 57b2 0290 1302 92b8 001d
+    0x0000530: 57b2 0295 1301 5713 0297 b800 3157 b202
+    0x0000540: 9a13 029c 1302 9eb8 0031 57b2 02a1 1301
+    0x0000550: 5713 02a3 b800 3157 b202 a613 02a8 1302
+    0x0000560: aab8 0031 57b2 02ad 1302 af13 02b1 b800
+    0x0000570: 3157 b202 b413 02b6 1302 b8b8 0031 57b2
+    0x0000580: 02bb 1302 bd13 02bf b800 3157 b202 c213
+    0x0000590: 02c4 b800 1d57 b202 c713 02c9 1302 cbb8
+    0x00005a0: 0031 57b2 02ce 1302 d013 02d2 b800 3157
+    0x00005b0: b202 d513 02d7 1302 d9b8 0031 57b2 02dc
+    0x00005c0: 1302 deb8 001d 57b2 02e1 1302 e313 02e5
+    0x00005d0: b800 3157 b202 e813 02ea 1302 ecb8 0031
+    0x00005e0: 57b2 02ef 1302 f113 02f3 b800 3157 b202
+    0x00005f0: f613 02f8 1302 fab8 0031 57b2 02fd 1301
+    0x0000600: 5713 02ff b800 3157 b203 0213 0304 1303
+    0x0000610: 06b8 0031 57b2 0309 1303 0bb8 001d 57b2
+    0x0000620: 030e 1303 1013 0312 b800 3157 b203 1513
+    0x0000630: 0157 1303 17b8 0031 57b2 031a 1301 5713
+    0x0000640: 031c b800 3157 b203 1f13 0321 b800 1d57
+    0x0000650: b203 2413 0157 1303 26b8 0031 57b2 0329
+    0x0000660: 1301 5713 032b b800 3157 b203 2e13 0330
+    0x0000670: b800 1d57 b203 3313 0335 1303 37b8 0031
+    0x0000680: 57b2 033a 1303 3cb8 001d 57b2 033f 1281
+    0x0000690: 1303 41b8 0031 57b2 0344 1281 1303 46b8
+    0x00006a0: 0031 57b2 0349 1303 4b13 034d b800 3157
+    0x00006b0: b203 5013 0352 1303 54b8 0031 57b2 0357
+    0x00006c0: 1303 5913 035b b800 3157 b203 5e13 0360
+    0x00006d0: b800 1d57 b203 6313 0365 b800 1d57 b203
+    0x00006e0: 6813 036a b800 1d57 b203 6d13 036f 1303
+    0x00006f0: 71b8 0031 57b2 0374 1303 76b8 001d 57b2
+    0x0000700: 0379 1303 7bb8 001d 57b1               
+  Stackmap Table:
+    append_frame(@1210,Integer)
+    same_frame(@1252)
+
+	at cpw.mods.fml.common.LoadController.transition(LoadController.java:163)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:559)
+	at cpw.mods.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:243)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:522)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(Unknown Source)
+	at GradleStart.main(Unknown Source)
+Caused by: java.lang.VerifyError: Bad type on operand stack
+Exception Details:
+  Location:
+    com/bioxx/tfc/BlockSetup.registerBlocks()V @1527: invokestatic
+  Reason:
+    Type 'java/lang/String' (current frame, stack[1]) is not assignable to 'java/lang/Class'
+  Current Frame:
+    bci: @1527
+    flags: { }
+    locals: { integer }
+    stack: { 'net/minecraft/block/Block', 'java/lang/String', 'java/lang/String' }
+  Bytecode:
+    0x0000000: b200 1512 17b8 001d 57b2 0020 1222 b800
+    0x0000010: 1d57 b200 2512 27b8 001d 57b2 002a 122c
+    0x0000020: 122e b800 3157 b200 3412 2c12 36b8 0031
+    0x0000030: 57b2 0039 122c 123b b800 3157 b200 3e12
+    0x0000040: 2c12 40b8 0031 57b2 0043 122c 1245 b800
+    0x0000050: 3157 b200 4812 2c12 4ab8 0031 57b2 004d
+    0x0000060: 122c 124f b800 3157 b200 5212 2c12 54b8
+    0x0000070: 0031 57b2 0057 122c 1259 b800 3157 b200
+    0x0000080: 5c12 2c12 5eb8 0031 57b2 0061 122c 1263
+    0x0000090: b800 3157 b200 6612 2c12 68b8 0031 57b2
+    0x00000a0: 006b 122c 126d b800 3157 b200 7012 2c12
+    0x00000b0: 72b8 0031 57b2 0075 122c 1277 b800 3157
+    0x00000c0: b200 7a12 2c12 7cb8 0031 57b2 007f 1281
+    0x00000d0: 1283 b800 3157 b200 8612 8112 88b8 0031
+    0x00000e0: 57b2 008b 1281 128d b800 3157 b200 9012
+    0x00000f0: 8112 92b8 0031 57b2 0095 1281 1297 b800
+    0x0000100: 3157 b200 9a12 8112 9cb8 0031 57b2 009f
+    0x0000110: 1281 12a1 b800 3157 b200 a412 8112 a6b8
+    0x0000120: 0031 57b2 00a9 1281 12ab b800 3157 b200
+    0x0000130: ae12 8112 b0b8 0031 57b2 00b3 1281 12b5
+    0x0000140: b800 3157 b200 b812 8112 bab8 0031 57b2
+    0x0000150: 00bd 1281 12bf b800 3157 b200 c212 8112
+    0x0000160: c4b8 0031 57b2 00c7 12c9 12cb b800 3157
+    0x0000170: b200 ce12 d0b8 001d 57b2 00d3 12d5 b800
+    0x0000180: 1d57 b200 d812 dab8 001d 57b2 00dd 12df
+    0x0000190: b800 1d57 b200 e212 8112 e3b8 0031 57b2
+    0x00001a0: 00e6 1281 12e7 b800 3157 b200 ea12 ec12
+    0x00001b0: eeb8 0031 57b2 00f1 12ec 12f3 b800 3157
+    0x00001c0: b200 f612 f812 fab8 0031 57b2 00fd 12f8
+    0x00001d0: 12ff b800 3157 b201 0213 0104 b800 1d57
+    0x00001e0: b201 0713 0109 1301 0bb8 0031 57b2 010e
+    0x00001f0: 1301 1013 0112 b800 3157 b201 1513 0109
+    0x0000200: 1301 16b8 0031 57b2 0119 1301 1013 011a
+    0x0000210: b800 3157 b201 1d13 011f 1301 20b8 0031
+    0x0000220: 57b2 0123 1301 2513 0126 b800 3157 b201
+    0x0000230: 2913 0109 1301 2ab8 0031 57b2 012d 1301
+    0x0000240: 1013 012e b800 3157 b201 3113 0133 b800
+    0x0000250: 1d57 b201 3613 0138 1301 3ab8 0031 57b2
+    0x0000260: 013d 1301 3f13 0141 b800 3157 b201 4413
+    0x0000270: 0146 1301 48b8 0031 57b2 014b 1301 4db8
+    0x0000280: 001d 57b2 0150 1301 52b8 001d 57b2 0155
+    0x0000290: 1301 5713 0159 b800 3157 b201 5c13 0157
+    0x00002a0: 1301 5eb8 0031 57b2 0161 1301 63b8 001d
+    0x00002b0: 57b2 0166 1301 68b8 001d 57b2 016b 1301
+    0x00002c0: 6cb8 001d 57b2 016f 1301 70b8 001d 57b2
+    0x00002d0: 0173 1301 74b8 001d 57b2 0177 1301 78b8
+    0x00002e0: 001d 57b2 017b 1301 7cb8 001d 57b2 017f
+    0x00002f0: 1301 80b8 001d 57b2 0183 1301 85b8 001d
+    0x0000300: 57b2 0188 1301 0913 018a b800 3157 b201
+    0x0000310: 8d13 0110 1301 8fb8 0031 57b2 0192 1301
+    0x0000320: 9413 0196 b800 3157 b201 9913 019b 1301
+    0x0000330: 9db8 0031 57b2 01a0 1301 a213 01a4 b800
+    0x0000340: 3157 b201 a713 01a9 b800 1d57 b201 ac13
+    0x0000350: 01ae 1301 b0b8 0031 57b2 01b3 1301 5713
+    0x0000360: 01b5 b800 3157 b201 b813 01ba b800 1d57
+    0x0000370: b201 bd13 0157 1301 bfb8 0031 57b2 01c2
+    0x0000380: 122c 1301 c4b8 0031 57b2 01c7 122c 1301
+    0x0000390: c9b8 0031 57b2 01cc 122c 1301 ceb8 0031
+    0x00003a0: 57b2 01d1 122c 1301 d3b8 0031 57b2 01d6
+    0x00003b0: 122c 1301 d8b8 0031 57b2 01db 122c 1301
+    0x00003c0: ddb8 0031 57b2 01e0 122c 1301 e2b8 0031
+    0x00003d0: 57b2 01e5 122c 1301 e7b8 0031 57b2 01ea
+    0x00003e0: 122c 1301 ecb8 0031 57b2 01ef 122c 1301
+    0x00003f0: f1b8 0031 57b2 01f4 122c 1301 f6b8 0031
+    0x0000400: 57b2 01f9 122c 1301 fbb8 0031 57b2 01fe
+    0x0000410: 122c 1302 00b8 0031 57b2 0203 122c 1302
+    0x0000420: 05b8 0031 57b2 0208 122c 1302 0ab8 0031
+    0x0000430: 57b2 020d 122c 1302 0fb8 0031 57b2 0212
+    0x0000440: 1302 14b8 001d 57b2 0217 1302 19b8 001d
+    0x0000450: 57b2 021c 1302 1eb8 001d 57b2 0221 1302
+    0x0000460: 23b8 001d 57b2 0226 1302 28b8 001d 57b2
+    0x0000470: 022b 1302 2db8 001d 57b2 0230 1302 32b8
+    0x0000480: 001d 57b2 0235 1302 37b8 001d 57b2 023a
+    0x0000490: 1302 3cb8 001d 57b2 023f 1302 41b8 001d
+    0x00004a0: 57b2 0244 1302 46b8 001d 57b2 0249 1302
+    0x00004b0: 4bb8 001d 5703 3ba7 002d b202 4f1a 32bb
+    0x00004c0: 0251 5913 0253 b702 56b2 025c 1a32 1302
+    0x00004d0: 5e13 0260 b602 66b6 026a b602 6eb8 001d
+    0x00004e0: 5784 0001 1ab2 025c bea1 ffd1 b202 7113
+    0x00004f0: 0273 b800 1d57 b202 7613 0278 1302 7ab8
+    0x0000500: 0031 57b2 027d 1302 7f13 0281 b800 3157
+    0x0000510: b202 8413 0286 b800 1d57 b202 8913 028b
+    0x0000520: 1302 8db8 0031 57b2 0290 1302 92b8 001d
+    0x0000530: 57b2 0295 1301 5713 0297 b800 3157 b202
+    0x0000540: 9a13 029c 1302 9eb8 0031 57b2 02a1 1301
+    0x0000550: 5713 02a3 b800 3157 b202 a613 02a8 1302
+    0x0000560: aab8 0031 57b2 02ad 1302 af13 02b1 b800
+    0x0000570: 3157 b202 b413 02b6 1302 b8b8 0031 57b2
+    0x0000580: 02bb 1302 bd13 02bf b800 3157 b202 c213
+    0x0000590: 02c4 b800 1d57 b202 c713 02c9 1302 cbb8
+    0x00005a0: 0031 57b2 02ce 1302 d013 02d2 b800 3157
+    0x00005b0: b202 d513 02d7 1302 d9b8 0031 57b2 02dc
+    0x00005c0: 1302 deb8 001d 57b2 02e1 1302 e313 02e5
+    0x00005d0: b800 3157 b202 e813 02ea 1302 ecb8 0031
+    0x00005e0: 57b2 02ef 1302 f113 02f3 b800 3157 b202
+    0x00005f0: f613 02f8 1302 fab8 0031 57b2 02fd 1301
+    0x0000600: 5713 02ff b800 3157 b203 0213 0304 1303
+    0x0000610: 06b8 0031 57b2 0309 1303 0bb8 001d 57b2
+    0x0000620: 030e 1303 1013 0312 b800 3157 b203 1513
+    0x0000630: 0157 1303 17b8 0031 57b2 031a 1301 5713
+    0x0000640: 031c b800 3157 b203 1f13 0321 b800 1d57
+    0x0000650: b203 2413 0157 1303 26b8 0031 57b2 0329
+    0x0000660: 1301 5713 032b b800 3157 b203 2e13 0330
+    0x0000670: b800 1d57 b203 3313 0335 1303 37b8 0031
+    0x0000680: 57b2 033a 1303 3cb8 001d 57b2 033f 1281
+    0x0000690: 1303 41b8 0031 57b2 0344 1281 1303 46b8
+    0x00006a0: 0031 57b2 0349 1303 4b13 034d b800 3157
+    0x00006b0: b203 5013 0352 1303 54b8 0031 57b2 0357
+    0x00006c0: 1303 5913 035b b800 3157 b203 5e13 0360
+    0x00006d0: b800 1d57 b203 6313 0365 b800 1d57 b203
+    0x00006e0: 6813 036a b800 1d57 b203 6d13 036f 1303
+    0x00006f0: 71b8 0031 57b2 0374 1303 76b8 001d 57b2
+    0x0000700: 0379 1303 7bb8 001d 57b1               
+  Stackmap Table:
+    append_frame(@1210,Integer)
+    same_frame(@1252)
+
+	at com.bioxx.tfc.TerraFirmaCraft.preInit(TerraFirmaCraft.java:72)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cpw.mods.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:532)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.sendEventToModContainer(LoadController.java:212)
+	at cpw.mods.fml.common.LoadController.propogateStateMessage(LoadController.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at cpw.mods.fml.common.LoadController.distributeStateMessage(LoadController.java:119)
+	at cpw.mods.fml.common.Loader.preinitializeMods(Loader.java:556)
+	... 12 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Mac OS X (x86_64) version 10.10.5
+	Java Version: 1.8.0_91, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 519938928 bytes (495 MB) / 879755264 bytes (839 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 0 total; 
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1558 9 mods loaded, 9 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCH	Forge{10.13.4.1558} [Minecraft Forge] (forgeSrc-1.7.10-10.13.4.1558-1.7.10.jar) 
+	UCH	NotEnoughItems{1.0.4.95} [Not Enough Items] (NotEnoughItems-1.7.10-1.0.4.95-dev.jar) 
+	UCH	tfc_coremod{0.79.29} [TFC[coremod]] (minecraft.jar) 
+	UCH	CodeChickenCore{1.0.4.35} [CodeChicken Core] (minecraft.jar) 
+	UCH	TerraFirmaPumpkins{1.2} [TerraFirmaPumpkins] (bin) 
+	UCH	Waila{1.5.11} [Waila] (Waila-1.5.11-RC2-NONEI_1.7.10.jar) 
+	UCE	terrafirmacraft{0.79.29} [TerraFirmaCraft] (bin) 
+	GL info: ' Vendor: 'Intel' Version: '2.1 INTEL-10.6.33' Renderer: 'Intel(R) Iris(TM) Graphics 6100'

@@ -1,0 +1,13 @@
+﻿#en_US
+#This is the Main language configuration file
+#========
+#= TerraFirmaPumpkins =
+#========
+item.Seeds Pumpkin.name=Pumpkin Seeds
+item.Raw Pumpkin.name=Raw Pumpkin
+item.Cooked Pumpkin.name=Pumpkin
+item.Seeds Melon.name=Melon Seeds
+item.Melon.name=Melon
+tile.Melon.name=Melon
+item.Raw Mushroom.mushroom_brown.name=Brown Mushroom
+item.Raw Mushroom.mushroom_red.name=Red Mushroom
