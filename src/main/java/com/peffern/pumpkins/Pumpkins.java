@@ -27,7 +27,7 @@ import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 
 /**
- * Mod to make Pumpkins a TFC crop
+ * Mod to make Pumpkins and Melons TFC crops - also mushrooms
  * @author peffern
  *
  */
@@ -66,7 +66,7 @@ public class Pumpkins
 	public static final String MODNAME = "TerraFirmaPumpkins";
 	
 	/** Mod Version */
-	public static final String VERSION = "2.0";
+	public static final String VERSION = "2.1";
 	
 	/**
 	 * Do all the main mod setup

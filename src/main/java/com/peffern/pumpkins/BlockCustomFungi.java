@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 /**
- * Modifications to the BlockFungi class that points to the custom mushroom items when it is broken
+ * Modifications to the BlockFungi class that points to the custom mushroom items
  * @author peffern
  *
  */
