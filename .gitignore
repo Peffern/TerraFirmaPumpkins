@@ -1,0 +1,6 @@
+#gitignore
+#these files have literal file paths in them and therefore have my real name :|
+logs
+.classpath
+config/CodeChickenLib.cfg
+/bin
