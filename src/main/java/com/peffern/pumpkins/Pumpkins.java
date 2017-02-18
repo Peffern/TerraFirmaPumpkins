@@ -1,6 +1,14 @@
 package com.peffern.pumpkins;
 
 
+import java.awt.Component;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 import com.bioxx.tfc.Core.Recipes;
 import com.bioxx.tfc.Food.ItemFoodTFC;
 import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
@@ -209,4 +217,29 @@ public class Pumpkins
 		else
 			return 0;
 	}
+	
+	/*
+	static JTextArea ta = null;
+	
+	public static void display(int c, int i, int j, int k)
+	{
+		System.out.println("received");
+		if(ta == null)
+		{
+			JFrame f = new JFrame();
+			f.setSize(300,300);
+			JPanel panel = new JPanel();
+			f.setContentPane(panel);
+			ta = new JTextArea(15,15);
+			panel.add(new JScrollPane(ta));
+			f.setVisible(true);
+		}
+		if(c > 18)
+		{
+			String s = c + " found at: " + i + "," + j + "," + k;
+			ta.setText(ta.getText() + "\n" + s);
+			ta.repaint();
+			ta.revalidate();
+		}
+	}*/
 }

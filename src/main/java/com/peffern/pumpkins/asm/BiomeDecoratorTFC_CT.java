@@ -79,33 +79,18 @@ public class BiomeDecoratorTFC_CT implements IClassTransformer
 						}
 						else if(minsn.owner.equals("com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops") && minsn.name.equals("generate"))
 						{
-							//insert debugging printouts. used this to debug in technode
-							/*InsnNode insn1 = new InsnNode(ACONST_NULL);
-							VarInsnNode var1 = new VarInsnNode(ILOAD,7);
-							MethodInsnNode method1 = new MethodInsnNode(INVOKESTATIC, "java/lang/Integer", "valueOf", "(I)Ljava/lang/Integer;", false);
-							MethodInsnNode method2 = new MethodInsnNode(INVOKESTATIC, "com/peffern/pumpkins/Pumpkins", "cropid", "(Ljava/awt/Component;Ljava/lang/Object;)V", false);
-							InsnNode insn2 = new InsnNode(ACONST_NULL);
-							VarInsnNode var2 = new VarInsnNode(ILOAD,3);
-							MethodInsnNode method3 = new MethodInsnNode(INVOKESTATIC, "java/lang/Integer", "valueOf", "(I)Ljava/lang/Integer;", false);
-							MethodInsnNode method4 = new MethodInsnNode(INVOKESTATIC, "com/peffern/pumpkins/Pumpkins", "xcoord", "(Ljava/awt/Component;Ljava/lang/Object;)V", false);
-							InsnNode insn3 = new InsnNode(ACONST_NULL);
-							VarInsnNode var3 = new VarInsnNode(ILOAD,5);
-							MethodInsnNode method5 = new MethodInsnNode(INVOKESTATIC, "java/lang/Integer", "valueOf", "(I)Ljava/lang/Integer;", false);
-							MethodInsnNode method6 = new MethodInsnNode(INVOKESTATIC, "com/peffern/pumpkins/Pumpkins", "xcoord", "(Ljava/awt/Component;Ljava/lang/Object;)V", false);
-							
-							m.instructions.insert(minsn,insn1);
-							m.instructions.insert(insn1,var1);
-							m.instructions.insert(var1,method1);
-							m.instructions.insert(method1,method2);
-							m.instructions.insert(method2,insn2);
-							m.instructions.insert(insn2,var2);
-							m.instructions.insert(var2,method3);
-							m.instructions.insert(method3,method4);
-							m.instructions.insert(method4,insn3);
-							m.instructions.insert(insn3,var3);
-							m.instructions.insert(var3,method5);
-							m.instructions.insert(method5,method6);*/
+							/*VarInsnNode var1 = new VarInsnNode(ILOAD, 3);
+							VarInsnNode var2 = new VarInsnNode(ILOAD, 7);
+							VarInsnNode var3 = new VarInsnNode(ILOAD, 9);
+							VarInsnNode var4 = new VarInsnNode(ILOAD, 8);
+							MethodInsnNode method1 = new MethodInsnNode(INVOKESTATIC, "com/peffern/pumpkins/Pumpkins", "display", "(IIII)V", false);
 
+							m.instructions.insert(minsn,var1);
+							m.instructions.insert(var1,var2);
+							m.instructions.insert(var2,var3);
+							m.instructions.insert(var3,var4);
+							m.instructions.insert(var4,method1);*/
+							
 						}
 					}
 				}
