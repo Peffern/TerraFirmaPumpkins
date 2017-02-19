@@ -18,7 +18,7 @@
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
-:sourceMainJava
+:sourceMainJava UP-TO-DATE
 :compileJavawarning: [options] bootstrap class path not set in conjunction with -source 1.6
 1 warning
 
@@ -32,10 +32,10 @@
 :reobf
 :assemble
 :check UP-TO-DATE
-:deobfJar
-:sourceJar
+:deobfJar UP-TO-DATE
+:sourceJar UP-TO-DATE
 :build
 
 BUILD SUCCESSFUL
 
-Total time: 11.536 secs
+Total time: 21.069 secs
