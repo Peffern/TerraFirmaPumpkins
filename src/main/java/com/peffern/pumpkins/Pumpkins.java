@@ -1,14 +1,6 @@
 package com.peffern.pumpkins;
 
 
-import java.awt.Component;
-
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-
 import com.bioxx.tfc.Core.Recipes;
 import com.bioxx.tfc.Food.ItemFoodTFC;
 import com.bioxx.tfc.Items.ItemBlocks.ItemTerraBlock;
