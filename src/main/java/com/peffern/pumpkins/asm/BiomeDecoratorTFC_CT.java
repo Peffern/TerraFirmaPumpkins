@@ -65,6 +65,12 @@ public class BiomeDecoratorTFC_CT implements IClassTransformer
 							m.instructions.insert(tinsn,newTinsn);
 							m.instructions.remove(tinsn);
 						}
+						else if(tinsn.desc.equals("com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops"))
+						{
+							TypeInsnNode newTinsn = new TypeInsnNode(tinsn.getOpcode(),"com/peffern/pumpkins/WorldGenDebugCrops");
+							m.instructions.insert(tinsn,newTinsn);
+							m.instructions.remove(tinsn);
+						}
 					}
 					//find the pumpkin gen <init> and call to generate
 					else if(insn instanceof MethodInsnNode)
@@ -77,20 +83,12 @@ public class BiomeDecoratorTFC_CT implements IClassTransformer
 							m.instructions.insert(minsn, newMinsn);
 							m.instructions.remove(minsn);
 						}
-						else if(minsn.owner.equals("com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops") && minsn.name.equals("generate"))
+						else if(minsn.owner.equals("com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops"))
 						{
-							/*VarInsnNode var1 = new VarInsnNode(ILOAD, 3);
-							VarInsnNode var2 = new VarInsnNode(ILOAD, 7);
-							VarInsnNode var3 = new VarInsnNode(ILOAD, 9);
-							VarInsnNode var4 = new VarInsnNode(ILOAD, 8);
-							MethodInsnNode method1 = new MethodInsnNode(INVOKESTATIC, "com/peffern/pumpkins/Pumpkins", "display", "(IIII)V", false);
-
-							m.instructions.insert(minsn,var1);
-							m.instructions.insert(var1,var2);
-							m.instructions.insert(var2,var3);
-							m.instructions.insert(var3,var4);
-							m.instructions.insert(var4,method1);*/
-							
+							//replace with dummy
+							MethodInsnNode newMinsn = new MethodInsnNode(minsn.getOpcode(), "com/peffern/pumpkins/WorldGenDebugCrops", minsn.name, minsn.desc, minsn.itf);
+							m.instructions.insert(minsn, newMinsn);
+							m.instructions.remove(minsn);
 						}
 					}
 				}
