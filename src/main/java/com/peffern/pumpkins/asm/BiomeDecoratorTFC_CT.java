@@ -4,8 +4,6 @@ import static org.objectweb.asm.Opcodes.*;
 
 import java.util.ListIterator;
 
-import javax.swing.JOptionPane;
-
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.tree.AbstractInsnNode;
@@ -49,6 +47,7 @@ public class BiomeDecoratorTFC_CT implements IClassTransformer
 			//find the render method
 			if((m.name.equals("genDecorations") || m.name.equals("func_150513_a")) && m.desc.equals("(Lnet/minecraft/world/biome/BiomeGenBase;)V"))
 			{
+
 				ListIterator<AbstractInsnNode> it = m.instructions.iterator();
 				//iterate over the bytecode instructions
 				while(it.hasNext())
@@ -64,6 +63,7 @@ public class BiomeDecoratorTFC_CT implements IClassTransformer
 							TypeInsnNode newTinsn = new TypeInsnNode(tinsn.getOpcode(),"com/peffern/pumpkins/WorldGenDummyPumpkin");
 							m.instructions.insert(tinsn,newTinsn);
 							m.instructions.remove(tinsn);
+
 						}
 						else if(tinsn.desc.equals("com/bioxx/tfc/WorldGen/Generators/WorldGenGrowCrops"))
 						{
