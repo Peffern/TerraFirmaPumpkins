@@ -1,0 +1,13 @@
+#de_DE
+#This is the German language configuration file
+#========
+#= TerraFirmaPumpkins =
+#========
+item.Seeds Pumpkin.name=Kürbissamen
+item.Raw Pumpkin.name=Roher Kürbis
+item.Cooked Pumpkin.name=Kürbis
+item.Seeds Melon.name=Melonensamen
+item.Melon.name=Melone
+tile.Melon.name=Melone
+item.Raw Mushroom.mushroom_brown.name=Brauner Pilz
+item.Raw Mushroom.mushroom_red.name=Roter Pilz
