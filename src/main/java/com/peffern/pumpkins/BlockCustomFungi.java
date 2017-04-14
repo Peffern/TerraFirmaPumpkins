@@ -28,7 +28,10 @@ public class BlockCustomFungi extends BlockFungi
 	@Override
 	public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-		return null;
+		if(Pumpkins.enableMushrooms)
+			return null;
+		else
+			return super.getItemDropped(p_149650_1_, p_149650_2_, p_149650_3_);
 	}
 	
 	/**
@@ -37,13 +40,18 @@ public class BlockCustomFungi extends BlockFungi
 	@Override
 	public void onBlockHarvested(World world, int i, int j, int k, int l, EntityPlayer player)
 	{
-		if(!world.isRemote)
+		if(Pumpkins.enableMushrooms)
 		{
-																//get the fungi based on damage
-			ItemStack is = ItemFoodTFC.createTag(new ItemStack(ItemCustomFungi.FUNGI.get(l)), 4);
-			//spawn
-			world.spawnEntityInWorld(new EntityItem(world, i, j, k, is));
-			
+			if(!world.isRemote)
+			{
+																	//get the fungi based on damage
+				ItemStack is = ItemFoodTFC.createTag(new ItemStack(ItemCustomFungi.FUNGI.get(l)), 4);
+				//spawn
+				world.spawnEntityInWorld(new EntityItem(world, i, j, k, is));
+				
+			}
 		}
+		else
+			super.onBlockHarvested(world, i, j, k, l, player);
 	}
 }

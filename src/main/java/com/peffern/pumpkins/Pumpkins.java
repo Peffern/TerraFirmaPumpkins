@@ -17,12 +17,14 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.MinecraftForgeClient;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 
@@ -67,6 +69,23 @@ public class Pumpkins
 	
 	/** Mod Version */
 	public static final String VERSION = "2.1";
+	
+	static Configuration config;
+	
+	static boolean enableMushrooms = true;
+	
+	/**
+	 * Configuration
+	 */
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent e)
+	{
+		config = new Configuration(e.getSuggestedConfigurationFile());
+		config.load();
+		enableMushrooms = config.get(Configuration.CATEGORY_GENERAL, "enableMushrooms", true, "Set to false to use the normal TFC mushrooms").getBoolean();
+		if(config.hasChanged())
+			config.save();
+	}
 	
 	/**
 	 * Do all the main mod setup
