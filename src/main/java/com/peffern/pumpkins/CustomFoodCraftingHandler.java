@@ -15,7 +15,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 /**
- * Override the food crafting handler in TFC in order to catch custom food crafting events 
+ * Override the food crafting handler in TFC in order to catch custom 
+ * food crafting events 
  * @author peffern
  *
  */
